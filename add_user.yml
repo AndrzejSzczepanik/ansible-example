@@ -1,0 +1,11 @@
+---
+- hosts: all
+  gather_facts: yes
+
+  tasks:
+    - name: Adding new user to  the system
+      user:
+        name: NewUser
+        shell: /bin/bash
+        groups: adm
+        append: yes
